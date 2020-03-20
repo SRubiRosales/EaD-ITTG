@@ -1,0 +1,164 @@
+header{
+    text-align: center;
+}
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+h1, h5{
+    text-align: center;
+}
+
+nav{
+    text-align: inherit;
+}
+
+nav div ul{
+    float: left;
+    list-style-type: none;
+    padding: 0;
+    position: relative; 
+    left: 50%;
+}
+nav div ul li{
+    float: left;
+    position: relative; 
+    right: 50%;
+}
+
+.menu {
+    font-size: large;
+    background-color: #1b396a;
+    display: flex;
+    justify-content: right;
+}
+
+.menu a{
+    color: white;
+    vertical-align: middle;
+    margin: 10px;
+}
+
+.page{
+    display: table;
+    width: 100%;
+    justify-content: center;
+}
+
+#logos-gob {
+    display: inline-block;
+    max-height: 140px;
+}
+
+.contenedor{
+    float: right;
+    width: 75%
+}
+aside {
+    float: left;
+    width: 25%;
+}
+
+.full-height {
+    height: 100vh;
+}
+.contenedorFooterR{
+    padding-top: 25px;
+    margin-bottom: 25px;
+    float: right;
+    width: 50%;
+    text-align: center;
+}
+.contenedorFooterL{
+    padding-top: 25px;
+    margin-bottom: 25px;
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+#fondo-footer{
+    background-image: url("https://www.tuxtla.tecnm.mx/wp-content/themes/albinomouse-child/fondofooter.jpg");
+    /*height: 300px;*/
+}
+
+.icono-footer {
+    width: 40px;
+    height: 40px;
+}
+
+
+#gob-footer {
+    width: 80%;
+    height: auto;
+	margin: 0 auto;
+	padding-top: 15px;
+}
+.site-info {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 13px !important;
+    color: #ffffff;
+    float: right;
+    background-color: #1b396a;
+}
+
+#colophon a {
+	font-weight: bold;
+}
+
+#colophon,
+#colophon a {
+	color: white;
+}
+
+.site-footer {
+	background-color: #1b396a;
+	padding-top: 25px;
+}
+
+#colophon .widget-title {
+	
+	padding-bottom: 10px;
+}
