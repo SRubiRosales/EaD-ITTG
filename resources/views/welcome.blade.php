@@ -24,7 +24,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
                     <li>
-                        <a class="active" href="{{ url('welcome') }}">Inicio</a>
+                        <a class="active" href="#">Inicio</a>
                     </li>
                     <li>
                         <a href="#">Oferta Educativa</a>
@@ -77,17 +77,19 @@
         <footer id="colophon" class="site-footer" role="contentinfo">          
             <div id="fondo-footer">
                 <div class="page">
-                    <section class="contenedorFooterL">
+                    <section id="contenedorFooterL">
                         <img src="{{ asset('imgs/gobmx_logo.png') }}" width="200px;">
                     </section>
-                    <section class="contenedorFooterR">
+                    <section id="contenedorFooterC">
+                        <h4>Instituto Tecnológico de Tuxtla Gutiérrez</h4>
+                        <h5>Martínez Rodas José Fabián<br>Rosales Sánchez Sharon Rubí</h5></section>
+                    <section id="contenedorFooterR">
                         <h4>Síguenos en</h4>
                         <a href="https://www.facebook.com/tecnmtuxtlagtz" target="_blank"><img class="icono-footer" src="{{ asset('imgs/facebook.png') }}"></a>
                         <a href="https://twitter.com/tecnmtuxtlagtz" target="_blank"><img class="icono-footer" src="{{ asset('imgs/twitter.png') }}"></a>
                     </section>
                     <hr>
                 </div>
-                <h5>Martínez Rodas José Fabián<br>Rosales Sánchez Sharon Rubí</h5>
             </div>
         </footer>
 
