@@ -13,10 +13,18 @@
     <body>
         <header><!--Encabezado-->
             <div id="logos-gob"><!--Logos institucionales-->
-                <a href="https://www.gob.mx/" target="_blank"><img src="{{ asset('imgs/gobmx.png') }}" alt="logo-gob-mx"></a>
-                <a href="https://www.gob.mx/sep" target="_blank"><img src="{{ asset('imgs/sep.png') }}" alt="logo-educacion"></a>
-                <a href="https://www.tecnm.mx/inicio.aspx" target="_blank"><img src="{{ asset('imgs/tecnm.jpg') }}" alt="logo-tecnm"></a>
-                <a href="https://www.tuxtla.tecnm.mx/" target="_blank"><img src="{{ asset('imgs/ittg.png') }}" alt="logo-ittg"></a>
+                <a href="https://www.gob.mx/" target="_blank">
+                    <img src="{{ asset('imgs/gobmx.png') }}" alt="logo-gob-mx">
+                </a>
+                <a href="https://www.gob.mx/sep" target="_blank">
+                    <img src="{{ asset('imgs/sep.png') }}" alt="logo-educacion">
+                </a>
+                <a href="https://www.tecnm.mx/inicio.aspx" target="_blank">
+                    <img src="{{ asset('imgs/tecnm.jpg') }}" alt="logo-tecnm">
+                </a>
+                <a href="https://www.tuxtla.tecnm.mx/" target="_blank">
+                    <img src="{{ asset('imgs/ittg.png') }}" alt="logo-ittg">
+                </a>
             </div><!--Logos institucionales-->
         </header>
         <!--Barra de navegación-->
@@ -30,7 +38,7 @@
                         <a href="#">Oferta Educativa</a>
                     </li>
                     <li>
-                        <a href="{{ url('directorio') }}">Sobre nosotros</a>
+                        <a href="{{ url('directorio') }}">Directorio</a>
                     </li>
                     <li>
                         <a href="#">Contáctanos</a>
@@ -55,44 +63,146 @@
                     @endauth
                 </div>
             @endif-->
-        <h1>Educación a Distancia</h1><!--Encabezado 1-->
+        
         <div class="page">
-            <aside>
-                <iframe width="280" height="160" src="https://www.youtube.com/embed/1fysHX-IgHo" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </aside>
+        <aside><!-- Aside, contenido no directamente relacionado con el contenido principal de la página -->
+            <!--Inline frame, incrusta video de YouTube en la página-->
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/1fysHX-IgHo" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Vídeo cargado desde nuestra carpeta de recursos, con controles de vídeo-->
+            <video width="300" height="240" controls>
+                <source src="video/video.mp4" type="video/mp4"> <!-- Carga del vídeo, y definición de tipo, con mensaje en caso de error-->
+                <p>Lo sentimos, su navegador no soporta este video</p>
+            </video>
+            <br>
+            <i>Conoce los síntomas que provoca el Coronavirus y cómo prevenir el contagio</i><!--Texto en cursiva-->
+            <audio src="{{ asset('media/Coronavirus-sintomas-y-prevencion.mp3') }}" preload="auto" controls></audio><!--Audio-->
+            <div> <!--Etiqueta con título para nuestro objeto-->
+                    <h2>Encuentranos en:</h2>
+                    <!-- Inicio de objeto de tipo html, que ejecuta una vista de google maps con la dirección del Tecnm campus Tgz -->
+                    <object
+                        type="text/html"
+                        data="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15281.603803455482!2d-93.172576!3d16.756716!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4e771d3242c2f25a!2sTecnol%C3%B3gico%20Nacional%20de%20M%C3%A9xico%20Campus%20Tuxtla%20Guti%C3%A9rrez!5e0!3m2!1ses-419!2smx!4v1584724817186!5m2!1ses-419!2smx"
+                        style="width: 300px; height:300px;">
+                        ERROR (no puede mostrarse el objeto)
+                    </object>
+                </div><!-- Fin de la sección del objeto -->
+        </aside><!-- Fin de aside-->
             <section class="contenedor"><!--Sección genérica-->
-                <article>
-
+            <h1 class="flex-center">Educación a Distancia</h1><!--Encabezado 1-->
+                <article><!-- Artículo 1 de la página de inicio -->
+                    <hgroup> <!-- Grupo de etiquetas con encabezados de artículos -->
+                        <h2>Somos TecNM</h2>
+                        <h3>Campus Tuxtla Gutiérrez</h3>
+                    </hgroup>
+                    <time datatime="17-09-2019">Publicado 17-09-2019</time> <!--Fecha de carga de dicho artículo-->
+                        <p class="parrafos">En nombre de quienes conformamos el Tecnológico Nacional de México campus Tuxtla Gutiérrez, te doy la más 
+                        cordial bienvenida a este sitio, diseñado para que encuentres toda la información relevante de nuestra institución.
+                        Durante más de 46 años, el Tecnológico Nacional de México campus Tuxtla Gutiérrez ha formado profesionistas de calidad, 
+                        con un claro compromiso social, cimentado en la ciencia, la investigación y el respeto a la dignidad de las personas, 
+                        brindando el acceso en condiciones de igualdad a una formación profesional de calidad.
+                        <cite><br><br>La ciencia no sabe de países, porque el conocimiento le pertenece a la humanidad y es la antorcha que ilumina al mundo. La ciencia es el alma de la 
+                            prosperidad de las naciones y la fuente de todo progreso”.
+                        </cite>
+                            – Louis Pasteur
+                        </p>
+                            <!-- Uso de parrafos con citas dentro del artículo -->
+                    <h4 class="flex-center">¡Bienvenido!</h4> <!-- Texto -->
+                    <p class="flex-center">Atte.</p>          <!-- Texto -->
+                    <h4 class="flex-center">José Manuel Rosado Pérez.</h4> <!-- Texto -->
+                    <h3 class="flex-center">Director del TecNM campus Tuxtla Gutiérrez</h3> <!-- Texto -->
                 </article>
             </section>
-            <div class="site-info">
-                <hr/>
-                <p>contacto.distancia@ittg.edu.mx<br/>
+            <section> <!-- Artículo 2 de la página de inicio -->
+                <article>
+                        <h2 class="align-right">Misión</h2> <!-- Título -->
+                        <p class="content margin-RL">Formar de manera integral profesionistas de excelencia en el campo 
+                        de la ciencia y la tecnología con actitud emprendedora, respeto al medio ambiente y apego a los valores éticos.</p>
+                        <!-- Párrafo -->
+                </article>
+            </section>
+            <section> <!-- Artículo 3 de la página de inicio -->
+                <article>
+                        <h2 class="align-right">Visión</h2> <!-- Título -->
+                        <p class="content margin-RL">Ser una Institución de Excelencia en la Educación Superior Tecnológica del 
+                            Sureste, comprometida con el desarrollo socioeconómico sustentable de la región..</p>
+                        <!-- Párrafo -->
+                </article>
+            </section>
+            <!-- Título con nuestras ofertas educativas -->
+            <h2 class="flex-center"><br>Oferta educativa</h2>
+                <!-- Inicio de la sección card con columnas y filas en caso de asignar más de ellas-->
+                <div class="row row-cols-1 row-cols-md-3"> <!-- Card de ingeniería en sistemas computacionales -->
+                    <div class="col mb-4">
+                        <div class="card">
+                        <img src="imgs/isc.jpg" class="card-img-top" alt="..."> <!-- Imagen -->
+                        <div class="card-body">
+                            <h4 class="card-titl content">Ingeniería en sistemas computacionales</h4> <!-- Título -->
+                            <p class="card-text">Forma parte de nuestros profesionistas con visión estratégica y sentido ético; capaces 
+                            de diseñar, desarrollar, implementar y administrar tecnología computacional para aportar soluciones innovadoras 
+                            en beneficio de la sociedad.</p> <!-- Contenido -->
+                            <br><br> <!-- Saltos de línea -->
+                            <a style="float: right;" href="">Ver más</a> <!-- Enlace-->
+                         </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4"> <!-- Card de ingeniería en gestión empresarial -->
+                        <div class="card">
+                        <img src="imgs/ige.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 class="card-title content">Ingeniería en gestión empresarial </h4>
+                            <p class="card-text parrafos">Contribuye a la gestión de empresas e innovación de procesos y de la cadena de suministros; así como al diseño, 
+                            implementación y desarrollo de sistemas estratégicos de negocios, optimizando recursos en un entorno global, implementación de normas 
+                            de calidad con ética y responsabilidad social. </p>
+                            <br><br><br>
+                            <a style="float: right;" href="">Ver más</a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4"> <!-- Card de ingeniería industrial -->
+                        <div class="card">
+                        <img src="imgs/ingi.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 class="card-title content">Ingeniería Industrial</h4>
+                            <p class="card-text parrafos">Abarca el conjunto de principios, reglas, normas, conocimientos teóricos y prácticas que se aplican
+                            profesionalmente para disponer de las bases, recursos, sistemas y materiales para diseñar, planear, organizar, operar y 
+                            evaluar procesos que generen beneficios y servicios con fines de dar una respuesta a las necesidades que requiere la sociedad<br></p>
+                            <br><br>
+                            <a style="float: right;" href="">Ver más</a>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            <div class="site-info"><!--Información de contacto-->
+                <hr/><!--Separador-->
+                <p>contacto.distancia@ittg.edu.mx<br/><!--Párrafo con saltos de línea-->
 					Carretera Panamericana Km. 1080, C.P. 29050, Apartado Postal: 599,<br/>
                     Tels. (961)61 5 03 80 y (961)61 5 04 61 Ext. 323<br/>
                     Línea directa (961) 61 5 62 52
 				</p>
             </div><!-- .site-info -->
         </div>
-        <footer id="colophon" class="site-footer" role="contentinfo">          
-            <div id="fondo-footer">
-                <div class="page">
-                    <section id="contenedorFooterL">
-                        <img src="{{ asset('imgs/gobmx_logo.png') }}" width="200px;">
-                    </section>
-                    <section id="contenedorFooterC">
-                        <h4>Instituto Tecnológico de Tuxtla Gutiérrez</h4>
-                        <h5>Martínez Rodas José Fabián<br>Rosales Sánchez Sharon Rubí</h5></section>
-                    <section id="contenedorFooterR">
-                        <h4>Síguenos en</h4>
-                        <a href="https://www.facebook.com/tecnmtuxtlagtz" target="_blank"><img class="icono-footer" src="{{ asset('imgs/facebook.png') }}"></a>
-                        <a href="https://twitter.com/tecnmtuxtlagtz" target="_blank"><img class="icono-footer" src="{{ asset('imgs/twitter.png') }}"></a>
-                    </section>
-                    <hr>
-                </div>
+        <footer class="site-footer" role="contentinfo"><!--Footer-->
+            <div class="page" id="fondo-footer">
+                <section id="contenedorFooterL"><!--Sección izquierda del footer-->
+                    <img src="{{ asset('imgs/gobmx_logo.png') }}" width="200px;"><!--Imagen del gobierno de MX-->
+                </section>
+                <section id="contenedorFooterC"><!--Sección central del footer-->
+                    <h4>Instituto Tecnológico de Tuxtla Gutiérrez</h4>
+                    <h5>Martínez Rodas José Fabián<br>Rosales Sánchez Sharon Rubí</h5></section>
+                <section id="contenedorFooterR"><!--Sección derecha del footer-->
+                    <h4>Síguenos en</h4>
+                    <!--Enlaces a redes sociales-->
+                    <a href="https://www.facebook.com/edittg.web" target="_blank">
+                        <img class="icono-footer" src="{{ asset('imgs/facebook.png') }}">
+                    </a>
+                    <a href="https://twitter.com/tecnmtuxtlagtz" target="_blank">
+                        <img class="icono-footer" src="{{ asset('imgs/twitter.png') }}">
+                    </a>
+                </section>
+                <hr>
             </div>
         </footer>
-
     </body>
     <!--Scripts de bootstrap-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

@@ -22,26 +22,27 @@
         <!--Barra de navegación-->
         <nav class="navbar navbar-expand menu">
             <div class="collapse navbar-collapse">
-                <ul class="navbar-nav mr-auto">
-                    <li>
-                        <a class="active" href="#">Inicio</a>
+                <ul class="navbar-nav mr-auto"><!--Listas no ordenadas-->
+                    <li><!--Elementos de la lista-->
+                        <a class="active" href="#">Inicio</a><!--Enlace (por ahora no lleva a ningún lado)-->
                     </li>
                     <li>
                         <a href="#">Oferta Educativa</a>
                     </li>
                     <li>
-                        <a href="{{ url('directorio') }}">Directorio</a>
+                        <a href="{{ url('directorio') }}">Directorio</a><!--Enlace que lleva al directorio-->
                     </li>
                     <li>
                         <a href="#">Contáctanos</a>
                     </li>
                 </ul>
+                <!--Sección con controles interactivos para enviar información a un servidor web (por ahora no hace nada)-->
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-primary" type="submit">Buscar</button>
-                </form>
+                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar"><!--Campo de datos tipado para búsqueda-->
+                    <button class="btn btn-outline-primary" type="submit">Buscar</button><!--Botón para buscar-->
+                </form><!--Fin de formulario-->
             </div>
-        </nav>
+        </nav><!--Fin de la barra de navegación-->
         <!--    @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -58,96 +59,142 @@
         
         <div class="page">
         <nav aria-label="breadcrumb"><!--Navegador de breadcrumbs-->
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Directorio</li>
-            </ol>
+            <ol class="breadcrumb"><!--Listas ordenadas-->
+                <li class="breadcrumb-item"><a href="#">Inicio</a></li><!--Punto 1-->
+                <li class="breadcrumb-item active" aria-current="page">Directorio</li><!--Punto 2-->
+            </ol><!-- Fin de lista ordenada -->
         </nav>
         
-            <aside>
-                <iframe width="280" height="160" src="https://www.youtube.com/embed/1fysHX-IgHo" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </aside>
-            <section class="contenedor"><!--Sección genérica-->
-            <h1 style="hidden">Educación a Distancia</h1>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Cargo</th>
-                            <th>Extensión</th>
-                            <th>Correo</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>José Manuel Rosado Pérez</td>
-                            <td>Director del ITTG</td>
-                            <td>101</td>
-                            <td>dir_tgutierrez@tecnm.mx</td>
-                        </tr>
-                        <tr>
-                            <td>Guillermina Peña Padilla</td>
-                            <td>Subdirección de Servicios Administrativos</td>
-                            <td>200<br/>201</td>
-                            <td>admon_tgutierrez@tecnm.mx</td>
-                        </tr>
-                        <tr>
-                            <td>José Ángel Zepeda Hernández</td>
-                            <td>Subdirección Académica</td>
-                            <td>300<br/>301</td>
-                            <td>acad_tgutierrez@tecnm.mx</td>
-                        </tr>
-                        <tr>
-                            <td>Alba Mercedes Mijangos Oceguera</td>
-                            <td>Coordinación General de Educación a Distancia del ITTG</td>
-                            <td>323</td>
-                            <td>distancia@ittg.edu.mx</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>Coordinación de Titulación</td>
-                            <td>3246</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Abelardo Guadalupe Zenteno Flores</td>
-                            <td>Coordinación Extensión Venustiano Carranza</td>
-                            <td></td>
-                            <td>ccarranza@ittg.edu.mx</td>
-                        </tr>
-                        <tr>
-                            <td>Daniel Parcero Martínez</td>
-                            <td>Coordinación Extensión Palenque</td>
-                            <td></td>
-                            <td>cpalenque@ittg.edu.mx</td>
-                        </tr>
-                        <tr>
-                            <td>Gerardo López López</td>
-                            <td>Coordinación Extensión Bochil</td>
-                            <td></td>
-                            <td>cbochil@ittg.edu.mx</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
+        <aside><!-- Aside, contenido no directamente relacionado con el contenido principal de la página -->
+            <!--Inline frame, incrusta video de YouTube en la página-->
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/1fysHX-IgHo" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Vídeo cargado desde nuestra carpeta de recursos, con controles de vídeo-->
+            <video width="300" height="240" controls>
+                <source src="video/video.mp4" type="video/mp4"> <!-- Carga del vídeo, y definición de tipo, con mensaje en caso de error-->
+                <p>Lo sentimos, su navegador no soporta este video</p>
+            </video>
+            <i>Conoce los síntomas que provoca el Coronavirus y cómo prevenir el contagio</i><!--Texto en cursiva-->
+            <audio src="{{ asset('media/Coronavirus-sintomas-y-prevencion.mp3') }}" preload="auto" controls></audio><!--Audio-->
+            <div> <!--Etiqueta con título para nuestro objeto-->
+                    <h2>Encuentranos en:</h2>
+                    <!-- Inicio de objeto de tipo html, que ejecuta una vista de google maps con la dirección del Tecnm campus Tgz -->
+                    <object
+                        type="text/html"
+                        data="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15281.603803455482!2d-93.172576!3d16.756716!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4e771d3242c2f25a!2sTecnol%C3%B3gico%20Nacional%20de%20M%C3%A9xico%20Campus%20Tuxtla%20Guti%C3%A9rrez!5e0!3m2!1ses-419!2smx!4v1584724817186!5m2!1ses-419!2smx"
+                        style="width: 300px; height:300px;">
+                        ERROR (no puede mostrarse el objeto)
+                    </object>
+                </div><!-- Fin de la sección del objeto -->
+        </aside><!-- Fin de aside-->
+        <section class="contenedor"><!--Sección genérica-->
+            <table class="table"><!--Tabla con información de contacto de directivos del ITTG-->
+                <thead><!--Encabezado de la tabla-->
+                    <tr><!--Fila-->
+                        <th>Nombre</th><!--Columnas de la tabla-->
+                        <th>Cargo</th>
+                        <th>Extensión</th>
+                        <th>Correo</th>
+                    </tr>
+                </thead><!--Fin de encabezado de la tabla-->
+                <tbody><!--Cuerpo de la tabla-->
+                    <tr><!--Columnas de la primer fila-->
+                        <td>José Manuel Rosado Pérez</td>
+                        <td>Director del ITTG</td>
+                        <td>101</td>
+                        <td>dir_tgutierrez@tecnm.mx</td>
+                    </tr>
+                    <tr><!--Columnas de la segunda fila-->
+                        <td>Guillermina Peña Padilla</td>
+                        <td>Subdirección de Servicios Administrativos</td>
+                        <td>200<br/>201</td>
+                        <td>admon_tgutierrez@tecnm.mx</td>
+                    </tr>
+                    <tr><!--Más filas...-->
+                        <td>José Ángel Zepeda Hernández</td>
+                        <td>Subdirección Académica</td>
+                        <td>300<br/>301</td>
+                        <td>acad_tgutierrez@tecnm.mx</td>
+                    </tr>
+                    <tr>
+                        <td>Alba Mercedes Mijangos Oceguera</td>
+                        <td>Coordinación General de Educación a Distancia del ITTG</td>
+                        <td>323</td>
+                        <td>distancia@ittg.edu.mx</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Coordinación de Titulación</td>
+                        <td>3246</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Sede Acala</td>
+                        <td>?</td>
+                        <td>?</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Sede Concordia</td>
+                        <td>?</td>
+                        <td>?</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Sede Siltepec</td>
+                        <td>?</td>
+                        <td>?</td>
+                    </tr>
+                    <tr>
+                        <td>Abelardo Guadalupe Zenteno Flores</td>
+                        <td>Coordinación Extensión Venustiano Carranza</td>
+                        <td></td>
+                        <td>ccarranza@ittg.edu.mx</td>
+                    </tr>
+                    <tr>
+                        <td>Daniel Parcero Martínez</td>
+                        <td>Coordinación Extensión Palenque</td>
+                        <td></td>
+                        <td>cpalenque@ittg.edu.mx</td>
+                    </tr>
+                    <tr>
+                        <td>Gerardo López López</td>
+                        <td>Coordinación Extensión Bochil</td>
+                        <td></td>
+                        <td>cbochil@ittg.edu.mx</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+            <div class="site-info"><!--Información de contacto-->
+                <hr/><!--Separador-->
+                <p>contacto.distancia@ittg.edu.mx<br/><!--Párrafo con saltos de línea-->
+					Carretera Panamericana Km. 1080, C.P. 29050, Apartado Postal: 599,<br/>
+                    Tels. (961)61 5 03 80 y (961)61 5 04 61 Ext. 323<br/>
+                    Línea directa (961) 61 5 62 52
+				</p>
+            </div><!-- .site-info -->
         </div>
-    </body>
-    <footer id="colophon" class="site-footer" role="contentinfo">          
-            <div id="fondo-footer">
-                <div class="page">
-                    <section id="contenedorFooterL">
-                        <img src="{{ asset('imgs/gobmx_logo.png') }}" width="200px;">
-                    </section>
-                    <section id="contenedorFooterC">
-                        <h4>Instituto Tecnológico de Tuxtla Gutiérrez</h4>
-                        <h5>Martínez Rodas José Fabián<br>Rosales Sánchez Sharon Rubí</h5></section>
-                    <section id="contenedorFooterR">
-                        <h4>Síguenos en</h4>
-                        <a href="https://www.facebook.com/tecnmtuxtlagtz" target="_blank"><img class="icono-footer" src="{{ asset('imgs/facebook.png') }}"></a>
-                        <a href="https://twitter.com/tecnmtuxtlagtz" target="_blank"><img class="icono-footer" src="{{ asset('imgs/twitter.png') }}"></a>
-                    </section>
-                    <hr>
-                </div>
+        <footer class="site-footer" role="contentinfo"><!--Footer-->
+            <div class="page" id="fondo-footer">
+                <section id="contenedorFooterL"><!--Sección izquierda del footer-->
+                    <img src="{{ asset('imgs/gobmx_logo.png') }}" width="200px;"><!--Imagen del gobierno de MX-->
+                </section>
+                <section id="contenedorFooterC"><!--Sección central del footer-->
+                    <h4>Instituto Tecnológico de Tuxtla Gutiérrez</h4>
+                    <h5>Martínez Rodas José Fabián<br>Rosales Sánchez Sharon Rubí</h5></section>
+                <section id="contenedorFooterR"><!--Sección derecha del footer-->
+                    <h4>Síguenos en</h4>
+                    <!--Enlaces a redes sociales-->
+                    <a href="https://www.facebook.com/edittg.web" target="_blank">
+                        <img class="icono-footer" src="{{ asset('imgs/facebook.png') }}">
+                    </a>
+                    <a href="https://twitter.com/tecnmtuxtlagtz" target="_blank">
+                        <img class="icono-footer" src="{{ asset('imgs/twitter.png') }}">
+                    </a>
+                </section>
+                <hr>
             </div>
         </footer>
+    </body>
 </html>
