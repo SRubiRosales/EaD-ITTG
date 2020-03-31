@@ -21,6 +21,11 @@ h4{
     font-weight: bold;
 }
 
+.parrafos{
+    text-align: justify;
+    margin-right: 10px;
+}
+
 .align-right{
     text-align: right;
     margin-right: 35px;
@@ -42,7 +47,9 @@ nav div ul li{
     position: relative; 
     right: 50%;
 }
-
+a.dropdown-item {
+    color: #000000 !important;
+}
 .menu {
     font-size: large;
     background-color: #1b396a;
@@ -74,7 +81,11 @@ aside i{
 
 .contenedor{
     float: right;
-    width: 75%
+    width: 75%;
+}
+
+a {
+    margin-bottom: 10px;
 }
 
 aside {
