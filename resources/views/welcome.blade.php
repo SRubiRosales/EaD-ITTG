@@ -74,7 +74,7 @@
             <!-- Vídeo cargado desde nuestra carpeta de recursos, con controles de vídeo-->
             <video width="100%" controls>
                 <source src="media/video.mp4" type="video/mp4"> <!-- Carga del vídeo, y definición de tipo, con mensaje en caso de error-->
-                <p>Lo sentimos, su navegador no soporta este video</p>
+                <p>Lo sentimos, su navegador no soporta este video, holiiii</p>
             </video>
             <br>
             <i>Conoce los síntomas que provoca el Coronavirus y cómo prevenir el contagio</i><!--Texto en cursiva-->
