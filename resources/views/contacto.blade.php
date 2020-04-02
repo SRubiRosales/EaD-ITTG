@@ -22,39 +22,31 @@
         <!--Barra de navegación-->
         <nav class="navbar navbar-expand menu">
             <div class="collapse navbar-collapse">
-                <ul class="navbar-nav mr-auto"><!--Listas no ordenadas-->
+                <ul class="navbar-nav mr-auto">
                     <li>
                         <a class="active" href="{{ url('/') }}">Inicio</a>
                     </li>
                     <li>
-                        <a class="active" href="#">Oferta Educativa</a>
+                        <a class="active" href="{{ url('ofertaEducativa') }}">Oferta Educativa</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li class="dropdown">
+                        <a class="nadropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Contacto
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ url('directorio') }}">Directorio</a>
-                        <a class="dropdown-item" href="{{ url('contacto') }}">Correo Institucional</a>
+                            <a class="dropdown-item" href="{{ url('directorio') }}">Directorio</a>
+                            <a class="dropdown-item" href="{{ url('contacto') }}">Correo Institucional</a>
                         </div>
                     </li>
                 </ul>
-                <!--Sección con controles interactivos para enviar información a un servidor web (por ahora no hace nada)-->
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar"><!--Campo de datos tipado para búsqueda-->
-                    <button class="btn btn-outline-primary" type="submit">Buscar</button><!--Botón para buscar-->
-                </form><!--Fin de formulario-->
+                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                    <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                </form>
             </div>
         </nav>
         
-        <div class="page">
-        <nav aria-label="breadcrumb"><!--Navegador de breadcrumbs-->
-            <ol class="breadcrumb"><!--Listas ordenadas-->
-                <li class="breadcrumb-item"><a href="#">Inicio</a></li><!--Punto 1-->
-                <li class="breadcrumb-item active" aria-current="page">Directorio</li><!--Punto 2-->
-            </ol><!-- Fin de lista ordenada -->
-        </nav>
-        
+    <div class="page">
         <aside><!-- Aside, contenido no directamente relacionado con el contenido principal de la página -->
             <!--Inline frame, incrusta video de YouTube en la página-->
             <iframe width="100%" src="https://www.youtube.com/embed/1fysHX-IgHo" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -78,7 +70,45 @@
                 </div><!-- Fin de la sección del objeto -->
         </aside><!-- Fin de aside-->
         <section class="contenedor"><!--Sección genérica-->
-            
+        <h1>¡Comunicate con nosotros! </h1>
+                <p>Recuerda que puedes contactárnos a través de nuestras redes sociales o vía telefonica a cualquiera de nuestros números 
+                en la sección de directorio.</p>
+                <span class="flex-center"><br>También puedes enviarnos un correo desde cualquier otra plataforma al correo que aparece al final pie de la página.</span>
+        <div class="page">
+            <aside>
+                <img class="flex-center" src="{{ asset('imgs/aviso.png') }}" alt="Aviso" style="" width="100%"> 
+            </aside>
+            <section class="contenedor">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span style="width: 100%;" class="input-group-text" id="basic-addon1">Nombre</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span style="width: 85px;" class="input-group-text" id="basic-addon1">Correo</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Correo" aria-label="Correo" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span style="width: 85px;" class="input-group-text" id="basic-addon1">Asunto</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Asunto" aria-label="Asunto" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <textarea class="form-control" placeholder="Mensaje" aria-label="With textarea"></textarea>
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Enviar</button>
+                    </div>   
+                    </div>
+                </div> 
+            </section>    
+        </div>
         </section>
             <div class="site-info"><!--Información de contacto-->
                 <hr/><!--Separador-->

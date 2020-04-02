@@ -78,7 +78,9 @@ aside i{
     display: inline-block;
     max-height: 140px;
 }
-
+p ~ span{
+    font-weight: bold;
+}
 .contenedor{
     float: right;
     width: 75%;
@@ -237,4 +239,13 @@ table {
 #colophon .widget-title {
 	
 	padding-bottom: 10px;
+}
+input:hover {
+    background-color: rgb(173, 184, 247);
+  }
+textarea:hover{
+    background-color: rgb(173, 184, 247); 
+}
+textarea:enabled {
+    color: red;
 }

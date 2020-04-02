@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,15 +11,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('welcome');
 });
-
 Route::get('/directorio', function () {
     return view('directorio');
-});*/
-
-Route::view('/', 'welcome');
-Route::view('/directorio', 'directorio');
-Route::view('/contacto', 'contacto');
-Route::view('/sobreNosotros','sobreNosotros');
+});
+Route::get('/contacto', function () {
+    return view('contacto');
+});
+Route::get('/ofertaEducativa', function () {
+    return view('ofertaEducativa');
+});
+Route::get('/sobreNosotros', function () {
+    return view('sobreNosotros');
+});

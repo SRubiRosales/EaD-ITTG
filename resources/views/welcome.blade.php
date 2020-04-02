@@ -32,10 +32,10 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
                     <li>
-                        <a class="active" href="#">Inicio</a>
+                        <a class="active" href="{{ url('/') }}">Inicio</a>
                     </li>
                     <li>
-                        <a class="active" href="#">Oferta Educativa</a>
+                        <a class="active" href="{{ url('ofertaEducativa') }}">Oferta Educativa</a>
                     </li>
                     <li class="dropdown">
                         <a class="nadropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -91,8 +91,9 @@
                 </div><!-- Fin de la sección del objeto -->
         </aside><!-- Fin de aside-->
         <section class="contenedor">
-            <img src="{{ asset('imgs/EducacionDistancia_banner.png') }}" alt="Convocatoria 2020" style="" width="100%">
-        
+            <a href="https://www.tuxtla.tecnm.mx/wp-content/uploads/2020/02/CONVOCATORIA-EaD-AGOSTO-2020.png" target="_blank">
+                <img src="{{ asset('imgs/EducacionDistancia_banner.png') }}" alt="Convocatoria 2020" style="" width="100%"> 
+            </a>
             <!-- Título con nuestras ofertas educativas -->
             <h2 class="flex-center" id="carreras"><br>Oferta educativa</h2>
                 <!-- Inicio de la sección card con columnas y filas en caso de asignar más de ellas-->

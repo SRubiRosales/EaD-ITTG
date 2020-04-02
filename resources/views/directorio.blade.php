@@ -22,25 +22,27 @@
         <!--Barra de navegación-->
         <nav class="navbar navbar-expand menu">
             <div class="collapse navbar-collapse">
-                <ul class="navbar-nav mr-auto"><!--Listas no ordenadas-->
-                    <li><!--Elementos de la lista-->
-                        <a class="active" href="#">Inicio</a><!--Enlace (por ahora no lleva a ningún lado)-->
+                <ul class="navbar-nav mr-auto">
+                    <li>
+                        <a class="active" href="{{ url('/') }}">Inicio</a>
                     </li>
                     <li>
-                        <a href="#">Oferta Educativa</a>
+                        <a class="active" href="{{ url('ofertaEducativa') }}">Oferta Educativa</a>
                     </li>
-                    <li>
-                        <a href="{{ url('directorio') }}">Directorio</a><!--Enlace que lleva al directorio-->
-                    </li>
-                    <li>
-                        <a href="#">Contáctanos</a>
+                    <li class="dropdown">
+                        <a class="nadropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Contacto
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ url('directorio') }}">Directorio</a>
+                            <a class="dropdown-item" href="{{ url('contacto') }}">Correo Institucional</a>
+                        </div>
                     </li>
                 </ul>
-                <!--Sección con controles interactivos para enviar información a un servidor web (por ahora no hace nada)-->
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar"><!--Campo de datos tipado para búsqueda-->
-                    <button class="btn btn-outline-primary" type="submit">Buscar</button><!--Botón para buscar-->
-                </form><!--Fin de formulario-->
+                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                    <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                </form>
             </div>
         </nav><!--Fin de la barra de navegación-->
         <!--    @if (Route::has('login'))
