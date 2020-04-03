@@ -21,6 +21,11 @@ h4{
     font-weight: bold;
 }
 
+.parrafos{
+    text-align: justify;
+    margin-right: 10px;
+}
+
 .align-right{
     text-align: right;
     margin-right: 35px;
@@ -42,7 +47,9 @@ nav div ul li{
     position: relative; 
     right: 50%;
 }
-
+a.dropdown-item {
+    color: #000000 !important;
+}
 .menu {
     font-size: large;
     background-color: #1b396a;
@@ -71,10 +78,80 @@ aside i{
     display: inline-block;
     max-height: 140px;
 }
-
+p ~ span{
+    font-weight: bold;
+}
 .contenedor{
     float: right;
-    width: 75%
+    width: 75%;
+}
+
+a {
+    margin-bottom: 10px;
+}
+
+.login-form{
+    padding: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-form h3{
+    font-size: x-large;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    color: #0062cc;
+}
+
+.register-form{
+    padding: 5%;
+    background: #0062cc;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.register-form h3{
+    font-size: x-large;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+.contenedor-login form{
+    padding: 10%;
+}
+
+.boton
+{
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+}
+
+input[value="Login"]{
+    font-weight: 600;
+    color: #fff;
+    background-color: #0062cc;
+}
+
+input[value="Registrarse"]{
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: #0062cc;
+    background-color: #fff;
+}
+.register-form .ForgetPwd{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+.login-form .ForgetPwd{
+    color: #0062cc;
+    font-weight: 600;
+    text-decoration: none;
 }
 
 aside {
@@ -190,6 +267,10 @@ table {
     text-transform: uppercase;
 }
 
+a[target="_blank"] {
+    font-style: italic;
+  }
+
 #fondo-footer{
     background-image: url("https://www.tuxtla.tecnm.mx/wp-content/themes/albinomouse-child/fondofooter.jpg");
     min-height: 150px;
@@ -226,4 +307,13 @@ table {
 #colophon .widget-title {
 	
 	padding-bottom: 10px;
+}
+input:hover {
+    background-color: rgb(173, 184, 247);
+  }
+textarea:hover{
+    background-color: rgb(173, 184, 247); 
+}
+textarea:enabled {
+    color: red;
 }
