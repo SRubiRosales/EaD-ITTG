@@ -22,46 +22,37 @@
         <!--Barra de navegación-->
         <nav class="navbar navbar-expand menu">
             <div class="collapse navbar-collapse">
-                <ul class="navbar-nav mr-auto"><!--Listas no ordenadas-->
-                    <li><!--Elementos de la lista-->
-                        <a class="active" href="#">Inicio</a><!--Enlace (por ahora no lleva a ningún lado)-->
-                    </li>
+            <ul class="navbar-nav mr-auto">
                     <li>
-                        <a href="#">Oferta Educativa</a>
+                        <a class="active" href="{{ url('/') }}">Inicio</a>
                     </li>
-                    <li>
-                        <a href="{{ url('directorio') }}">Directorio</a><!--Enlace que lleva al directorio-->
+                    <li class="nav-item dropdown">
+                        <a class="nadropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Oferta Educativa
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ url('ofertaEducativa') }}">Sedes Remotas</a>
+                            <a class="dropdown-item" href="{{ url('convocatoria') }}">Convocatoria</a>
+                        </div>
                     </li>
-                    <li>
-                        <a href="#">Contáctanos</a>
+                    <li class="dropdown">
+                        <a class="nadropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Contacto
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ url('directorio') }}">Directorio</a>
+                            <a class="dropdown-item" href="{{ url('contacto') }}">Correo Institucional</a>
+                        </div>
                     </li>
                 </ul>
-                <!--Sección con controles interactivos para enviar información a un servidor web (por ahora no hace nada)-->
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar"><!--Campo de datos tipado para búsqueda-->
-                    <button class="btn btn-outline-primary" type="submit">Buscar</button><!--Botón para buscar-->
-                </form><!--Fin de formulario-->
             </div>
         </nav><!--Fin de la barra de navegación-->
-        <!--    @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif-->
         
         <div class="page">
         <nav aria-label="breadcrumb"><!--Navegador de breadcrumbs-->
             <ol class="breadcrumb"><!--Listas ordenadas-->
-                <li class="breadcrumb-item"><a href="#">Inicio</a></li><!--Punto 1-->
-                <li class="breadcrumb-item active" aria-current="page">Directorio</li><!--Punto 2-->
+                <li class="breadcrumb-item"><a href="{{ url('/') }}">Inicio</a></li><!--Punto 1-->
+                <li class="breadcrumb-item active" aria-current="page">Iniciar de sesión</li><!--Punto 2-->
             </ol><!-- Fin de lista ordenada -->
         </nav>
         
@@ -87,84 +78,54 @@
                 </div><!-- Fin de la sección del objeto -->
         </aside><!-- Fin de aside-->
         <section class="contenedor"><!--Sección genérica-->
-            <table class="table"><!--Tabla con información de contacto de directivos del ITTG-->
-                <thead><!--Encabezado de la tabla-->
-                    <tr><!--Fila-->
-                        <th>Nombre</th><!--Columnas de la tabla-->
-                        <th>Cargo</th>
-                        <th>Extensión</th>
-                        <th>Correo</th>
-                    </tr>
-                </thead><!--Fin de encabezado de la tabla-->
-                <tbody><!--Cuerpo de la tabla-->
-                    <tr><!--Columnas de la primer fila-->
-                        <td>José Manuel Rosado Pérez</td>
-                        <td>Director del ITTG</td>
-                        <td>101</td>
-                        <td>dir_tgutierrez@tecnm.mx</td>
-                    </tr>
-                    <tr><!--Columnas de la segunda fila-->
-                        <td>Guillermina Peña Padilla</td>
-                        <td>Subdirección de Servicios Administrativos</td>
-                        <td>200<br/>201</td>
-                        <td>admon_tgutierrez@tecnm.mx</td>
-                    </tr>
-                    <tr><!--Más filas...-->
-                        <td>José Ángel Zepeda Hernández</td>
-                        <td>Subdirección Académica</td>
-                        <td>300<br/>301</td>
-                        <td>acad_tgutierrez@tecnm.mx</td>
-                    </tr>
-                    <tr>
-                        <td>Alba Mercedes Mijangos Oceguera</td>
-                        <td>Coordinación General de Educación a Distancia del ITTG</td>
-                        <td>323</td>
-                        <td>distancia@ittg.edu.mx</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Coordinación de Titulación</td>
-                        <td>3246</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Sede Acala</td>
-                        <td>?</td>
-                        <td>?</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Sede Concordia</td>
-                        <td>?</td>
-                        <td>?</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Sede Siltepec</td>
-                        <td>?</td>
-                        <td>?</td>
-                    </tr>
-                    <tr>
-                        <td>Abelardo Guadalupe Zenteno Flores</td>
-                        <td>Coordinación Extensión Venustiano Carranza</td>
-                        <td></td>
-                        <td>ccarranza@ittg.edu.mx</td>
-                    </tr>
-                    <tr>
-                        <td>Daniel Parcero Martínez</td>
-                        <td>Coordinación Extensión Palenque</td>
-                        <td></td>
-                        <td>cpalenque@ittg.edu.mx</td>
-                    </tr>
-                    <tr>
-                        <td>Gerardo López López</td>
-                        <td>Coordinación Extensión Bochil</td>
-                        <td></td>
-                        <td>cbochil@ittg.edu.mx</td>
-                    </tr>
-                </tbody>
-            </table>
+        <h1>Bienvenido</h1>
+        <div class="contenedor-login"><!--Contenedor para formularios de inicio de sesión y registro-->
+            <div class="row">
+                <div class="col-md-6 login-form"><!--Contenedor para formulario de login-->
+                    <h3>Inicia Sesión</h3><!--Encabezado 3-->
+                    <form><!--Sección de formulario-->
+                        <div class="form-group"><!--Sección del formulario para campo de texto-->
+                            <input type="text" class="form-control" placeholder="Nombre de usuario / Email" value="" />
+                        </div>
+                        <div class="form-group"><!--Sección del formulario para campo de contraseña-->
+                            <input type="password" class="form-control" placeholder="Contraseña" value=""/>
+                        </div>
+                        <div class="form-group"><!--Sección del formulario con botón-->
+                            <input type="submit" class="boton" value="Login" />
+                        </div>
+                        <div class="form-group"><!--Sección del formulario enlace para recuperar contraseña-->
+                            <a href="#" class="ForgetPwd">¿Olvidaste tu contraseña?</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 register-form"><!--Contenedor para formulario de registro-->
+                    <h3>Regístrate</h3>
+                    <form>
+                    <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Número de control" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Nombre" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Apellido" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Email" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Contraseña" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Verifique la Contraseña" value=""/>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="boton" value="Regristrarse" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         </section>
             <div class="site-info"><!--Información de contacto-->
                 <hr/><!--Separador-->

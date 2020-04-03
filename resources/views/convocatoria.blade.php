@@ -24,7 +24,7 @@
             <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
                     <li>
-                        <a class="active" href="{{ url('/') }}">Inicio</a>
+                        <a href="{{ url('/') }}">Inicio</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nadropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -35,8 +35,8 @@
                             <a class="dropdown-item" href="{{ url('convocatoria') }}">Convocatoria</a>
                         </div>
                     </li>
-                    <li class=" nav-item dropdown">
-                        <a class="nadropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li class="dropdown">
+                        <a class="nadropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Contacto
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -54,147 +54,69 @@
                     </button>
                 </form>
             </div>
-        </nav><!--Fin de la barra de navegación-->
-        <!--    @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif-->
+        </nav>
         
-        <div class="page">
+    <div class="page">
         <nav aria-label="breadcrumb"><!--Navegador de breadcrumbs-->
             <ol class="breadcrumb"><!--Listas ordenadas-->
                 <li class="breadcrumb-item"><a href="{{ url('/') }}">Inicio</a></li><!--Punto 1-->
-                <li class="breadcrumb-item active" aria-current="page">Directorio</li><!--Punto 2-->
+                <li class="breadcrumb-item active" aria-current="page">Convocatoria</li><!--Punto 2-->
             </ol><!-- Fin de lista ordenada -->
         </nav>
-        
         <aside><!-- Aside, contenido no directamente relacionado con el contenido principal de la página -->
             <!--Inline frame, incrusta video de YouTube en la página-->
-            <iframe width="300" height="200" src="https://www.youtube.com/embed/1fysHX-IgHo" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="100%" src="https://www.youtube.com/embed/1fysHX-IgHo" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <!-- Vídeo cargado desde nuestra carpeta de recursos, con controles de vídeo-->
-            <video width="300" height="240" controls>
-                <source src="video/video.mp4" type="video/mp4"> <!-- Carga del vídeo, y definición de tipo, con mensaje en caso de error-->
+            <video width="100%" controls>
+                <source src="media/video.mp4" type="video/mp4"> <!-- Carga del vídeo, y definición de tipo, con mensaje en caso de error-->
                 <p>Lo sentimos, su navegador no soporta este video</p>
             </video>
+            <br>
             <i>Conoce los síntomas que provoca el Coronavirus y cómo prevenir el contagio</i><!--Texto en cursiva-->
-            <audio src="{{ asset('media/Coronavirus-sintomas-y-prevencion.mp3') }}" preload="auto" controls></audio><!--Audio-->
+            <audio src="{{ asset('media/Coronavirus-sintomas-y-prevencion.mp3') }}" preload="auto" width="100%" controls></audio><!--Audio-->
             <div> <!--Etiqueta con título para nuestro objeto-->
                     <h2>Encuentranos en:</h2>
                     <!-- Inicio de objeto de tipo html, que ejecuta una vista de google maps con la dirección del Tecnm campus Tgz -->
                     <object
                         type="text/html"
                         data="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15281.603803455482!2d-93.172576!3d16.756716!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4e771d3242c2f25a!2sTecnol%C3%B3gico%20Nacional%20de%20M%C3%A9xico%20Campus%20Tuxtla%20Guti%C3%A9rrez!5e0!3m2!1ses-419!2smx!4v1584724817186!5m2!1ses-419!2smx"
-                        style="width: 300px; height:300px;">
+                        style="width: 100%;">
                         ERROR (no puede mostrarse el objeto)
                     </object>
                 </div><!-- Fin de la sección del objeto -->
         </aside><!-- Fin de aside-->
         <section class="contenedor"><!--Sección genérica-->
-            <table class="table"><!--Tabla con información de contacto de directivos del ITTG-->
-                <thead><!--Encabezado de la tabla-->
-                    <tr><!--Fila-->
-                        <th>Nombre</th><!--Columnas de la tabla-->
-                        <th>Cargo</th>
-                        <th>Extensión</th>
-                        <th>Correo</th>
-                    </tr>
-                </thead><!--Fin de encabezado de la tabla-->
-                <tbody><!--Cuerpo de la tabla-->
-                    <tr><!--Columnas de la primer fila-->
-                        <td>José Manuel Rosado Pérez</td>
-                        <td>Director del ITTG</td>
-                        <td>101</td>
-                        <td>dir_tgutierrez@tecnm.mx</td>
-                    </tr>
-                    <tr><!--Columnas de la segunda fila-->
-                        <td>Guillermina Peña Padilla</td>
-                        <td>Subdirección de Servicios Administrativos</td>
-                        <td>200<br/>201</td>
-                        <td>admon_tgutierrez@tecnm.mx</td>
-                    </tr>
-                    <tr><!--Más filas...-->
-                        <td>José Ángel Zepeda Hernández</td>
-                        <td>Subdirección Académica</td>
-                        <td>300<br/>301</td>
-                        <td>acad_tgutierrez@tecnm.mx</td>
-                    </tr>
-                    <tr>
-                        <td>Alba Mercedes Mijangos Oceguera</td>
-                        <td>Coordinación General de Educación a Distancia del ITTG</td>
-                        <td>323</td>
-                        <td>distancia@ittg.edu.mx</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Coordinación de Titulación</td>
-                        <td>3246</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Griselda Yazmin Petrikowsky López</td>
-                        <td>Sede Acala</td>
-                        <td></td>
-                        <td>acalaed@ittg.edu.mx</td>
-                    </tr>
-                    <tr>
-                        <td>Favio Alejandro Alvarado Cruz</td>
-                        <td>Sede Concordia (Ingeniería en Sistemas Computacionales)</td>
-                        <td></td>
-                        <td>favio.alvarado@ittg.edu.mx</td>
-                    </tr>
-                    <tr>
-                        <td>Teresa de Jésus Gomez Ruiz</td>
-                        <td>Sede Concordia (Ingeniería Industrial)</td>
-                        <td></td>
-                        <td>teresa.gomez@ittg.edu.mx</td>
-                    </tr>
-                    <tr>
-                        <td>Lic. César Wilmar Díaz Ramírez</td>
-                        <td>Sede Siltepec (Ingeniería en Sistemas Computacionales)</td>
-                        <td></td>
-                        <td>cesar.diaz@ittg.edu.mx</td>
-                    </tr>
-                    <tr>
-                        <td>Ing. Ademia Laparra Hernández</td>
-                        <td>Sede Siltepec (Ingeniería en Sistemas Computacionales)</td>
-                        <td></td>
-                        <td>ademia.laparra@ittg.edu.mx</td>
-                    </tr>
-                    <tr>
-                        <td> Lic Sonia Marisol Anzueto Roblero</td>
-                        <td>Sede Siltepec (Ingeniería Industrial)</td>
-                        <td></td>
-                        <td>sonia.anzueto@ittg.edu.mx</td>
-                    </tr>
-                    <tr>
-                        <td>Abelardo Guadalupe Zenteno Flores</td>
-                        <td>Coordinación Extensión Venustiano Carranza</td>
-                        <td></td>
-                        <td>ccarranza@ittg.edu.mx</td>
-                    </tr>
-                    <tr>
-                        <td>Daniel Parcero Martínez</td>
-                        <td>Coordinación Extensión Palenque</td>
-                        <td></td>
-                        <td>cpalenque@ittg.edu.mx</td>
-                    </tr>
-                    <tr>
-                        <td>Gerardo López López</td>
-                        <td>Coordinación Extensión Bochil</td>
-                        <td></td>
-                        <td>cbochil@ittg.edu.mx</td>
-                    </tr>
-                </tbody>
-            </table>
+            <a href="https://www.tuxtla.tecnm.mx/wp-content/uploads/2020/02/CONVOCATORIA-EaD-AGOSTO-2020.png" target="_blank">
+                <img src="{{ asset('imgs/convocatoria_banner.png') }}" alt="Convocatoria 2020" style="" width="100%"> 
+            </a>
+            <h1>Convocatoria 2020 </h1>
+            <div class="card-group">
+                <div class="card">
+                <img src="imgs/estudia_en_linea.png" class="card-img-top" alt="Estudia en línea">
+                    <div class="card-body">
+                    <h5 class="card-title">Consulta las convocatorias</h5>
+                    <hr>
+                    <h6>Convocatoria Educación a Distancia 2020</h6>
+                    <p class="card-text">Estudia de forma virtual</p>
+                    <span>
+                    <a href="https://bit.ly/2JrrJad" target="_blank">Ver convocatoria</a> <!-- Enlace-->
+                    </span>
+                    <hr>
+                    <h6>Convocatoria Educación a Distancia - Unidades Remotas 2020</h6>
+                    <p class="card-text">Conoce nuestras unidades remotas</p>
+                    <span>
+                    <a href="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/p720x720/89820618_496620691224548_4106994590546919424_o.jpg?_nc_cat=111&_nc_sid=110474&_nc_ohc=E-L8sp_rYOAAX8-40cP&_nc_ht=scontent-dfw5-1.xx&_nc_tp=6&oh=2c4866e4591077c1b307d939015c66ed&oe=5EADAA02" target="_blank">Ver convocatoria</a> <!-- Enlace-->
+                    </span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="imgs/pasosRegistro.png" class="card-img-top" alt="Pasos para registro">
+                    <div class="card-body">
+                    <h5 class="card-title">Sigue estos pasos para estudiar en línea</h5>
+                    <p class="card-text">Quédate en casa y estudia 100% en línea</p>
+                    </div>
+                </div>
+            </div>
         </section>
             <div class="site-info"><!--Información de contacto-->
                 <hr/><!--Separador-->

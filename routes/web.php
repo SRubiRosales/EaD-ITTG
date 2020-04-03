@@ -10,12 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('welcome');
-});
-Route::get('/directorio', function () {
-    return view('directorio');
 });
 Route::get('/contacto', function () {
     return view('contacto');
@@ -25,4 +22,12 @@ Route::get('/ofertaEducativa', function () {
 });
 Route::get('/sobreNosotros', function () {
     return view('sobreNosotros');
-});
+});*/
+
+Route::view('/', 'welcome');
+Route::view('/contacto', 'contacto');
+Route::view('/ofertaEducativa', 'ofertaEducativa');
+Route::view('/directorio', 'directorio');
+Route::view('/sobreNosotros', 'sobreNosotros');
+Route::view('/convocatoria', 'convocatoria');
+Route::view('/login', 'login');
