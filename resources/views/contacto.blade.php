@@ -85,23 +85,26 @@
                 </div><!-- Fin de la sección del objeto -->
         </aside><!-- Fin de aside-->
         <section class="contenedor"><!--Sección genérica-->
-        <h1>¡Comunicate con nosotros! </h1>
+        <!-- Cuerpo de la vista contacto -->
+        <h1>¡Comunicate con nosotros! </h1> <!-- Título -->
                 <p>Recuerda que puedes contactárnos a través de nuestras redes sociales o vía telefonica a cualquiera de nuestros números 
                 en la sección de directorio.</p>
                 <span class="flex-center"><br>También puedes enviarnos un correo desde cualquier otra plataforma al correo que aparece al final pie de la página.</span>
-        <div class="page">
-            <aside>
+        <div class="page"> <!-- div que utilizamos para guardar todo el contenido de nuestro formulario-->
+            <section class="mitad-izquierda"> <!-- Contenido con imagen situado a la izquierda -->
                 <img class="flex-center" src="{{ asset('imgs/aviso.png') }}" alt="Aviso" style="" width="100%"> 
-            </aside>
-            <section class="contenedor">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
+            </section>
+            <section class="mitad-derecha"> <!-- Contenido con el formulario situado a la derecha con imagen -->
+            <img class="flex-center" src="{{ asset('imgs/email.png') }}" alt="Aviso" style="margin-left: 150px;" width="50%">     
+            <br>
+                <div class="input-group mb-3"> <!-- input-group para poder ingresar varias entradas de nuestros formularios-->
+                    <div class="input-group-prepend"> <!-- input para que el usuario ingrese su nombre-->
                         <span style="width: 100%;" class="input-group-text" id="basic-addon1">Nombre</span>
                     </div>
                     <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1">
                     </div>
 
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3"> <!-- Input para ingresar su correo -->
                     <div class="input-group-prepend">
                         <span style="width: 85px;" class="input-group-text" id="basic-addon1">Correo</span>
                     </div>
@@ -109,13 +112,13 @@
                     </div>
 
                     <div class="input-group mb-3">
-                    <div class="input-group-prepend">
+                    <div class="input-group-prepend"> <!-- Input para ingresar asunto del correo-->
                         <span style="width: 85px;" class="input-group-text" id="basic-addon1">Asunto</span>
                     </div>
                     <input type="text" class="form-control" placeholder="Asunto" aria-label="Asunto" aria-describedby="basic-addon1">
                     </div>
 
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3"> <!-- textarea para ingresar el contenido del mensaje -->
                         <textarea class="form-control" placeholder="Mensaje" aria-label="With textarea"></textarea>
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary" type="button" id="button-addon2">Enviar</button>
