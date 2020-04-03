@@ -46,10 +46,11 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <!--<input type="submit" class="btn btn-outline-primary" value="Login"/>-->
-                    <button class="btn btn-outline-primary" type="submit">
+                    <button class="btn btn-outline-primary" type="button">
+                        <a href="{{ url('/login') }}">
                         Iniciar Sesión
                         <span><img src="{{ asset('imgs/login.png') }}" alt="Login"></span>
+                        </a>
                     </button>
                 </form>
             </div>
@@ -59,7 +60,7 @@
         <nav aria-label="breadcrumb"><!--Navegador de breadcrumbs-->
             <ol class="breadcrumb"><!--Listas ordenadas-->
                 <li class="breadcrumb-item"><a href="{{ url('/') }}">Inicio</a></li><!--Punto 1-->
-                <li class="breadcrumb-item active" aria-current="page">Contacto</li><!--Punto 2-->
+                <li class="breadcrumb-item active" aria-current="page">Convocatoria</li><!--Punto 2-->
             </ol><!-- Fin de lista ordenada -->
         </nav>
         <aside><!-- Aside, contenido no directamente relacionado con el contenido principal de la página -->
@@ -85,48 +86,37 @@
                 </div><!-- Fin de la sección del objeto -->
         </aside><!-- Fin de aside-->
         <section class="contenedor"><!--Sección genérica-->
-        <!-- Cuerpo de la vista contacto -->
-        <h1>¡Comunicate con nosotros! </h1> <!-- Título -->
-                <p>Recuerda que puedes contactárnos a través de nuestras redes sociales o vía telefonica a cualquiera de nuestros números 
-                en la sección de directorio.</p>
-                <span class="flex-center"><br>También puedes enviarnos un correo desde cualquier otra plataforma al correo que aparece al final pie de la página.</span>
-        <div class="page"> <!-- div que utilizamos para guardar todo el contenido de nuestro formulario-->
-            <section class="mitad-izquierda"> <!-- Contenido con imagen situado a la izquierda -->
-                <img class="flex-center" src="{{ asset('imgs/aviso.png') }}" alt="Aviso" style="" width="100%"> 
-            </section>
-            <section class="mitad-derecha"> <!-- Contenido con el formulario situado a la derecha con imagen -->
-            <img class="flex-center" src="{{ asset('imgs/email.png') }}" alt="Aviso" style="margin-left: 150px;" width="50%">     
-            <br>
-                <div class="input-group mb-3"> <!-- input-group para poder ingresar varias entradas de nuestros formularios-->
-                    <div class="input-group-prepend"> <!-- input para que el usuario ingrese su nombre-->
-                        <span style="width: 100%;" class="input-group-text" id="basic-addon1">Nombre</span>
+            <a href="https://www.tuxtla.tecnm.mx/wp-content/uploads/2020/02/CONVOCATORIA-EaD-AGOSTO-2020.png" target="_blank">
+                <img src="{{ asset('imgs/convocatoria_banner.png') }}" alt="Convocatoria 2020" style="" width="100%"> 
+            </a>
+            <h1>Convocatoria 2020 </h1>
+            <div class="card-group">
+                <div class="card">
+                <img src="imgs/estudia_en_linea.png" class="card-img-top" alt="Estudia en línea">
+                    <div class="card-body">
+                    <h5 class="card-title">Consulta las convocatorias</h5>
+                    <hr>
+                    <h6>Convocatoria Educación a Distancia 2020</h6>
+                    <p class="card-text">Estudia de forma virtual</p>
+                    <span>
+                    <a href="https://bit.ly/2JrrJad" target="_blank">Ver convocatoria</a> <!-- Enlace-->
+                    </span>
+                    <hr>
+                    <h6>Convocatoria Educación a Distancia - Unidades Remotas 2020</h6>
+                    <p class="card-text">Conoce nuestras unidades remotas</p>
+                    <span>
+                    <a href="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/p720x720/89820618_496620691224548_4106994590546919424_o.jpg?_nc_cat=111&_nc_sid=110474&_nc_ohc=E-L8sp_rYOAAX8-40cP&_nc_ht=scontent-dfw5-1.xx&_nc_tp=6&oh=2c4866e4591077c1b307d939015c66ed&oe=5EADAA02" target="_blank">Ver convocatoria</a> <!-- Enlace-->
+                    </span>
                     </div>
-                    <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1">
+                </div>
+                <div class="card">
+                    <img src="imgs/pasosRegistro.png" class="card-img-top" alt="Pasos para registro">
+                    <div class="card-body">
+                    <h5 class="card-title">Sigue estos pasos para estudiar en línea</h5>
+                    <p class="card-text">Quédate en casa y estudia 100% en línea</p>
                     </div>
-
-                    <div class="input-group mb-3"> <!-- Input para ingresar su correo -->
-                    <div class="input-group-prepend">
-                        <span style="width: 85px;" class="input-group-text" id="basic-addon1">Correo</span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Correo" aria-label="Correo" aria-describedby="basic-addon1">
-                    </div>
-
-                    <div class="input-group mb-3">
-                    <div class="input-group-prepend"> <!-- Input para ingresar asunto del correo-->
-                        <span style="width: 85px;" class="input-group-text" id="basic-addon1">Asunto</span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Asunto" aria-label="Asunto" aria-describedby="basic-addon1">
-                    </div>
-
-                    <div class="input-group mb-3"> <!-- textarea para ingresar el contenido del mensaje -->
-                        <textarea class="form-control" placeholder="Mensaje" aria-label="With textarea"></textarea>
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Enviar</button>
-                    </div>   
-                    </div>
-                </div> 
-            </section>    
-        </div>
+                </div>
+            </div>
         </section>
             <div class="site-info"><!--Información de contacto-->
                 <hr/><!--Separador-->

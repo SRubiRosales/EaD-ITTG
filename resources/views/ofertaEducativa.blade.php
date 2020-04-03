@@ -22,12 +22,18 @@
         <!--Barra de navegación-->
         <nav class="navbar navbar-expand menu">
             <div class="collapse navbar-collapse">
-                <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto">
                     <li>
-                        <a class="active" href="{{ url('/') }}">Inicio</a>
+                        <a chref="{{ url('/') }}">Inicio</a>
                     </li>
-                    <li>
-                        <a class="active" href="{{ url('ofertaEducativa') }}">Oferta Educativa</a>
+                    <li class="nav-item dropdown">
+                        <a class="nadropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Oferta Educativa
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ url('ofertaEducativa') }}">Sedes Remotas</a>
+                            <a class="dropdown-item" href="{{ url('convocatoria') }}">Convocatoria</a>
+                        </div>
                     </li>
                     <li class="dropdown">
                         <a class="nadropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -40,8 +46,10 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                    <button class="btn btn-outline-primary" type="submit">
+                        Iniciar Sesión
+                        <span><img src="{{ asset('imgs/login.png') }}" alt="Login"></span>
+                    </button>
                 </form>
             </div>
         </nav><!--Fin de la barra de navegación-->
@@ -60,6 +68,12 @@
             @endif-->
         
         <div class="page">
+        <nav aria-label="breadcrumb"><!--Navegador de breadcrumbs-->
+            <ol class="breadcrumb"><!--Listas ordenadas-->
+                <li class="breadcrumb-item"><a href="{{ url('/') }}">Inicio</a></li><!--Punto 1-->
+                <li class="breadcrumb-item active" aria-current="page">Oferta Educativa</li><!--Punto 2-->
+            </ol><!-- Fin de lista ordenada -->
+        </nav>
         <aside><!-- Aside, contenido no directamente relacionado con el contenido principal de la página -->
             <!--Inline frame, incrusta video de YouTube en la página-->
             <iframe width="300" height="200" src="https://www.youtube.com/embed/1fysHX-IgHo" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

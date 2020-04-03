@@ -30,12 +30,18 @@
         <!--Barra de navegación-->
         <nav class="navbar navbar-expand menu">
             <div class="collapse navbar-collapse">
-                <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto">
                     <li>
                         <a class="active" href="{{ url('/') }}">Inicio</a>
                     </li>
-                    <li>
-                        <a class="active" href="{{ url('ofertaEducativa') }}">Oferta Educativa</a>
+                    <li class="nav-item dropdown">
+                        <a class="nadropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Oferta Educativa
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ url('ofertaEducativa') }}">Sedes Remotas</a>
+                            <a class="dropdown-item" href="{{ url('convocatoria') }}">Convocatoria</a>
+                        </div>
                     </li>
                     <li class="dropdown">
                         <a class="nadropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -48,8 +54,12 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                    <button class="btn btn-outline-primary" type="button">
+                        <a href="{{ url('/login') }}">
+                        Iniciar Sesión
+                        <span><img src="{{ asset('imgs/login.png') }}" alt="Login"></span>
+                        </a>
+                    </button>
                 </form>
             </div>
         </nav>

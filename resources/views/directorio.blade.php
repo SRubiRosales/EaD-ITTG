@@ -22,14 +22,20 @@
         <!--Barra de navegación-->
         <nav class="navbar navbar-expand menu">
             <div class="collapse navbar-collapse">
-                <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto">
                     <li>
                         <a class="active" href="{{ url('/') }}">Inicio</a>
                     </li>
-                    <li>
-                        <a class="active" href="{{ url('ofertaEducativa') }}">Oferta Educativa</a>
+                    <li class="nav-item dropdown">
+                        <a class="nadropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Oferta Educativa
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ url('ofertaEducativa') }}">Sedes Remotas</a>
+                            <a class="dropdown-item" href="{{ url('convocatoria') }}">Convocatoria</a>
+                        </div>
                     </li>
-                    <li class="dropdown">
+                    <li class=" nav-item dropdown">
                         <a class="nadropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Contacto
                         </a>
@@ -40,8 +46,12 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                    <button class="btn btn-outline-primary" type="button">
+                        <a href="{{ url('/login') }}">
+                        Iniciar Sesión
+                        <span><img src="{{ asset('imgs/login.png') }}" alt="Login"></span>
+                        </a>
+                    </button>
                 </form>
             </div>
         </nav><!--Fin de la barra de navegación-->
@@ -62,7 +72,7 @@
         <div class="page">
         <nav aria-label="breadcrumb"><!--Navegador de breadcrumbs-->
             <ol class="breadcrumb"><!--Listas ordenadas-->
-                <li class="breadcrumb-item"><a href="#">Inicio</a></li><!--Punto 1-->
+                <li class="breadcrumb-item"><a href="{{ url('/') }}">Inicio</a></li><!--Punto 1-->
                 <li class="breadcrumb-item active" aria-current="page">Directorio</li><!--Punto 2-->
             </ol><!-- Fin de lista ordenada -->
         </nav>
@@ -130,22 +140,40 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>Griselda Yazmin Petrikowsky López</td>
                         <td>Sede Acala</td>
-                        <td>?</td>
-                        <td>?</td>
+                        <td></td>
+                        <td>acalaed@ittg.edu.mx</td>
                     </tr>
                     <tr>
+                        <td>Favio Alejandro Alvarado Cruz</td>
+                        <td>Sede Concordia (Ingeniería en Sistemas Computacionales)</td>
                         <td></td>
-                        <td>Sede Concordia</td>
-                        <td>?</td>
-                        <td>?</td>
+                        <td>favio.alvarado@ittg.edu.mx</td>
                     </tr>
                     <tr>
+                        <td>Teresa de Jésus Gomez Ruiz</td>
+                        <td>Sede Concordia (Ingeniería Industrial)</td>
                         <td></td>
-                        <td>Sede Siltepec</td>
-                        <td>?</td>
-                        <td>?</td>
+                        <td>teresa.gomez@ittg.edu.mx</td>
+                    </tr>
+                    <tr>
+                        <td>Lic. César Wilmar Díaz Ramírez</td>
+                        <td>Sede Siltepec (Ingeniería en Sistemas Computacionales)</td>
+                        <td></td>
+                        <td>cesar.diaz@ittg.edu.mx</td>
+                    </tr>
+                    <tr>
+                        <td>Ing. Ademia Laparra Hernández</td>
+                        <td>Sede Siltepec (Ingeniería en Sistemas Computacionales)</td>
+                        <td></td>
+                        <td>ademia.laparra@ittg.edu.mx</td>
+                    </tr>
+                    <tr>
+                        <td> Lic Sonia Marisol Anzueto Roblero</td>
+                        <td>Sede Siltepec (Ingeniería Industrial)</td>
+                        <td></td>
+                        <td>sonia.anzueto@ittg.edu.mx</td>
                     </tr>
                     <tr>
                         <td>Abelardo Guadalupe Zenteno Flores</td>
