@@ -78,12 +78,19 @@ aside i{
     display: inline-block;
     max-height: 140px;
 }
-p ~ span{
-    font-weight: bold;
-}
+
 .contenedor{
     float: right;
     width: 75%;
+}
+
+.mitad-derecha{
+    float: right;
+    width: 50%;
+}
+.mitad-izquierda{
+    float: left;
+    width: 50%;
 }
 
 a {
@@ -240,12 +247,21 @@ table {
 	
 	padding-bottom: 10px;
 }
-input:hover {
+input:hover { /*-- Pseudoclases de estado: el cual cada que pasemos el cursor sobre un input o un textarea 
+    se pinte de otro color --*/
     background-color: rgb(173, 184, 247);
   }
 textarea:hover{
     background-color: rgb(173, 184, 247); 
 }
-textarea:enabled {
+textarea:enabled { /*-- Pseudoclases de estado: el cual usamos para que el texto del textarea se escriba en rojo cuando
+    se des-seleccione --*/
     color: red;
+}
+p ~ span{ /*-- Selector hermanos: que utilizamos para cambiar todos los span seguidos de un parrafo --*/
+    font-weight: bold;
+}
+ /*-- Selector de atributo: para que cada enlace sea pintado de color plateado, cuando sean un enlace a facebook --*/
+a[href*="facebook"] {
+    background-color: silver;
 }
