@@ -20,39 +20,26 @@
             </div><!--Logos institucionales-->
         </header>
         <!--Barra de navegación-->
-        <nav class="navbar navbar-expand menu">
-            <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                    <li>
-                        <a chref="{{ url('/') }}">Inicio</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nadropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Oferta Educativa
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ url('ofertaEducativa') }}">Sedes Remotas</a>
-                            <a class="dropdown-item" href="{{ url('convocatoria') }}">Convocatoria</a>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a class="nadropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Contacto
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ url('directorio') }}">Directorio</a>
-                            <a class="dropdown-item" href="{{ url('contacto') }}">Correo Institucional</a>
-                        </div>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-outline-primary" type="submit">
-                        Iniciar Sesión
-                        <span><img src="{{ asset('imgs/login.png') }}" alt="Login"></span>
-                    </button>
-                </form>
-            </div>
-        </nav><!--Fin de la barra de navegación-->
+        <!--<input type="checkbox" id="boton-menu">
+        <label for="boton-menu"><img src="imgs/menu.png" alt="Menú"></label>-->
+        <nav class="nav-menu">
+            <ul class="menu">
+                <li><a href="{{ url('/') }}">Inicio</a></li>
+                <li><a href="#">Oferta Educativa</a>
+                    <ul>
+                        <li><a href="{{ url('ofertaEducativa') }}">Sedes Remotas</a></li>
+                        <li><a href="{{ url('convocatoria') }}">Convocatoria</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contacto</a>
+                    <ul>
+                        <li><a href="{{ url('directorio') }}">Directorio</a></li>
+                        <li><a href="{{ url('contacto') }}">Correo Institucional</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ url('/login') }}">Iniciar Sesión</a></li>
+            </ul>
+        </nav><!--Fin de barra de navegación-->
         <!--    @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -74,7 +61,6 @@
                 <li class="breadcrumb-item active" aria-current="page">Oferta Educativa</li><!--Punto 2-->
             </ol><!-- Fin de lista ordenada -->
         </nav>
-        
         <aside><!-- Aside, contenido no directamente relacionado con el contenido principal de la página -->
             <!--Inline frame, incrusta video de YouTube en la página-->
             <iframe width="300" height="200" src="https://www.youtube.com/embed/1fysHX-IgHo" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -97,84 +83,84 @@
                 </div><!-- Fin de la sección del objeto -->
         </aside><!-- Fin de aside-->
         <section class="contenedor"><!--Sección genérica-->
-            <table class="table"><!--Tabla con información de contacto de directivos del ITTG-->
-                <thead><!--Encabezado de la tabla-->
-                    <tr><!--Fila-->
-                        <th>Nombre</th><!--Columnas de la tabla-->
-                        <th>Cargo</th>
-                        <th>Extensión</th>
-                        <th>Correo</th>
-                    </tr>
-                </thead><!--Fin de encabezado de la tabla-->
-                <tbody><!--Cuerpo de la tabla-->
-                    <tr><!--Columnas de la primer fila-->
-                        <td>José Manuel Rosado Pérez</td>
-                        <td>Director del ITTG</td>
-                        <td>101</td>
-                        <td>dir_tgutierrez@tecnm.mx</td>
-                    </tr>
-                    <tr><!--Columnas de la segunda fila-->
-                        <td>Guillermina Peña Padilla</td>
-                        <td>Subdirección de Servicios Administrativos</td>
-                        <td>200<br/>201</td>
-                        <td>admon_tgutierrez@tecnm.mx</td>
-                    </tr>
-                    <tr><!--Más filas...-->
-                        <td>José Ángel Zepeda Hernández</td>
-                        <td>Subdirección Académica</td>
-                        <td>300<br/>301</td>
-                        <td>acad_tgutierrez@tecnm.mx</td>
-                    </tr>
-                    <tr>
-                        <td>Alba Mercedes Mijangos Oceguera</td>
-                        <td>Coordinación General de Educación a Distancia del ITTG</td>
-                        <td>323</td>
-                        <td>distancia@ittg.edu.mx</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Coordinación de Titulación</td>
-                        <td>3246</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Sede Acala</td>
-                        <td>?</td>
-                        <td>?</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Sede Concordia</td>
-                        <td>?</td>
-                        <td>?</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Sede Siltepec</td>
-                        <td>?</td>
-                        <td>?</td>
-                    </tr>
-                    <tr>
-                        <td>Abelardo Guadalupe Zenteno Flores</td>
-                        <td>Coordinación Extensión Venustiano Carranza</td>
-                        <td></td>
-                        <td>ccarranza@ittg.edu.mx</td>
-                    </tr>
-                    <tr>
-                        <td>Daniel Parcero Martínez</td>
-                        <td>Coordinación Extensión Palenque</td>
-                        <td></td>
-                        <td>cpalenque@ittg.edu.mx</td>
-                    </tr>
-                    <tr>
-                        <td>Gerardo López López</td>
-                        <td>Coordinación Extensión Bochil</td>
-                        <td></td>
-                        <td>cbochil@ittg.edu.mx</td>
-                    </tr>
-                </tbody>
-            </table>
+       <h1>Solo sigue estos pequeños pasos</h1> <!-- Título -->
+        <h3 class="flex-center">Necesitas ayude, pregunta por los horarios de atención, y ven con nosotros.</h3> 
+        <!-- Imagen --> 
+        <img target="_blank" src="{{ asset('imgs/pasos.jpeg') }}" alt="pasos" width="50%" style="margin-left: 250px; float: center;">   
+        <div class="page">
+            <br><br><br> 
+            <h1>Conoce todas nuestras sedes</h1>
+            <!-- Card con la información básica de cada una de nuestras sedes -->
+            <div class="card-group">
+                        <div class="card">
+                            <!-- Imagen de la sede o municipio en el que se encuentra -->
+                            <img src="{{ asset('imgs/ittg.jpg') }}" class="card-img-top" alt="ittg" width="100%">
+                            <div class="card-body">
+                            <!-- Imágenes y texto que conforman la estructura básica de la información de contacto -->
+                            <h5 class="card-title"><h2 class="">Sede Tuxtla Gutiérrez</h2>
+                            <p>KM 29020, Carr. Panamericana 1080, Boulevares, 29050 Tuxtla Gutiérrez, Chis <br> 
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yJ/r/4VjyF4t9Hqt.png?_nc_eui2=AeETwqjvH4NJPpzdIWxqfGCyn8BlgvApJHWGADjZ5Mllp1LBV6az9BLbTFJ1op2-CAgxyJHED2DApKkSInAZt1VdJP06cXC5shqJDEP5WFvrrA" alt=""> Llamanos al 61 5 62 52 <br>
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yy/r/vKDzW_MdhyP.png?_nc_eui2=AeE2DyMgL_fGNYCubBm_MgLVicC3nRh6tgOgH5YjlpFR9l2iOxbjrQZoonFqb97HJ39lRaTktI9kcnsdQWV6p5tuH4fFlegz6QAN8WuMaC9vXg" alt=""> Hablanos contacto@ittg.edu.mx<br>
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yk/r/uknIbAjicIZ.png?_nc_eui2=AeGcM__xBwLOpFePXW98PH-TI673RnsqLIp88pN5EemXkF1ldnCxYaBEK06lL91HU93O-WKq1XaoCKobCpWRkfn_3W6pao0no4aljRPT31El_g" alt=""> 
+                            <!-- Enlace a la página de facebook de la sede -->
+                            <a class="text-right" href="https://www.facebook.com/pg/edittg.web/about/?ref=page_internal">Contáctanos vía FB</a> </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                        <img src="{{ asset('imgs/concordia.jpg') }}" class="card-img-top" alt="ittg" width="100%">
+                            <div class="card-body">
+                            <h5 class="card-title"><h2>Sede Concordia</h2>
+                            <p>Calle CHIAPAS SOLIDARIO,  Colonia ZONA URBANA La Concordia, La Concordia, Chiapas, México, C.P. 30360<br> 
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yJ/r/4VjyF4t9Hqt.png?_nc_eui2=AeETwqjvH4NJPpzdIWxqfGCyn8BlgvApJHWGADjZ5Mllp1LBV6az9BLbTFJ1op2-CAgxyJHED2DApKkSInAZt1VdJP06cXC5shqJDEP5WFvrrA" alt=""> Llamanos al 01 992 63 647 93 <br>
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yy/r/vKDzW_MdhyP.png?_nc_eui2=AeE2DyMgL_fGNYCubBm_MgLVicC3nRh6tgOgH5YjlpFR9l2iOxbjrQZoonFqb97HJ39lRaTktI9kcnsdQWV6p5tuH4fFlegz6QAN8WuMaC9vXg" alt=""> Hablanos cresudlaconcordia@gmail.com <br>
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yk/r/uknIbAjicIZ.png?_nc_eui2=AeGcM__xBwLOpFePXW98PH-TI673RnsqLIp88pN5EemXkF1ldnCxYaBEK06lL91HU93O-WKq1XaoCKobCpWRkfn_3W6pao0no4aljRPT31El_g" alt=""> 
+                            <a class="text-right" href="https://www.facebook.com/Educación-a-Distancia-La-Concordia-Ittg-201767440358752/">Contáctanos vía FB</a> </p>
+                        </div>
+            </div>
+            <div class="card-group">
+                        <div class="card">
+                        <img src="{{ asset('imgs/acala.png') }}" class="card-img-top" alt="ittg" width="100%">
+                            <div class="card-body">
+                            <h5 class="card-title"><h2>Sede Acala</h2>
+                            <p>Avenida Grijalva 5020 CP. 29372 Acala, Mexico, Barrio San José <br> 
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yJ/r/4VjyF4t9Hqt.png?_nc_eui2=AeETwqjvH4NJPpzdIWxqfGCyn8BlgvApJHWGADjZ5Mllp1LBV6az9BLbTFJ1op2-CAgxyJHED2DApKkSInAZt1VdJP06cXC5shqJDEP5WFvrrA" alt=""> Llamanos al ¿?<br>
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yy/r/vKDzW_MdhyP.png?_nc_eui2=AeE2DyMgL_fGNYCubBm_MgLVicC3nRh6tgOgH5YjlpFR9l2iOxbjrQZoonFqb97HJ39lRaTktI9kcnsdQWV6p5tuH4fFlegz6QAN8WuMaC9vXg" alt=""> Hablanos ¿?<br>
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yk/r/uknIbAjicIZ.png?_nc_eui2=AeGcM__xBwLOpFePXW98PH-TI673RnsqLIp88pN5EemXkF1ldnCxYaBEK06lL91HU93O-WKq1XaoCKobCpWRkfn_3W6pao0no4aljRPT31El_g" alt=""> 
+                            <a class="text-right" href="https://www.facebook.com/sedeacala.ittg.5?sk=about&section=contact-info&lst=100001723204048%3A100026298638407%3A1585804691">Contáctanos vía FB</a> </p>
+                        </div>
+            </div>
+                        <div class="card">
+                            <img src="{{ asset('imgs/siltepec.jpg') }}" class="card-img-top" alt="ittg" width="100%">
+                            <div class="card-body">
+                            <h5 class="card-title"><h2>Sede Siltepec</h2>
+                            <p>Vega del Rosario, Siltepec, Chis.<br> 
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yJ/r/4VjyF4t9Hqt.png?_nc_eui2=AeETwqjvH4NJPpzdIWxqfGCyn8BlgvApJHWGADjZ5Mllp1LBV6az9BLbTFJ1op2-CAgxyJHED2DApKkSInAZt1VdJP06cXC5shqJDEP5WFvrrA" alt=""> Llamanos al ¿?<br>
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yy/r/vKDzW_MdhyP.png?_nc_eui2=AeE2DyMgL_fGNYCubBm_MgLVicC3nRh6tgOgH5YjlpFR9l2iOxbjrQZoonFqb97HJ39lRaTktI9kcnsdQWV6p5tuH4fFlegz6QAN8WuMaC9vXg" alt=""> Hablanos ¿?<br>
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yk/r/uknIbAjicIZ.png?_nc_eui2=AeGcM__xBwLOpFePXW98PH-TI673RnsqLIp88pN5EemXkF1ldnCxYaBEK06lL91HU93O-WKq1XaoCKobCpWRkfn_3W6pao0no4aljRPT31El_g" alt=""> 
+                            <a class="text-right" href="https://www.facebook.com/marisol.anzuetoroblero/about?section=overview&lst=100001723204048%3A100035279287711%3A1585867716">Contáctanos vía FB</a> </p>
+                        </div>
+            </div>
+                <!--<div class="mitad-izquierda">
+                    <h2>Sede Tuxtla Gutiérrez</h2>
+                    <img  class="flex-center" target="_blank" src="{{ asset('imgs/ittg.jpg') }}" alt="ittg" width="60%">
+
+                    <br><br><br><br>
+                    <h2>Dirección</h2>
+                    <p>La Concordia, Chis. <br> 
+                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yJ/r/4VjyF4t9Hqt.png?_nc_eui2=AeETwqjvH4NJPpzdIWxqfGCyn8BlgvApJHWGADjZ5Mllp1LBV6az9BLbTFJ1op2-CAgxyJHED2DApKkSInAZt1VdJP06cXC5shqJDEP5WFvrrA" alt=""> Llamanos al 01 992 63 647 93 <br>
+                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yy/r/vKDzW_MdhyP.png?_nc_eui2=AeE2DyMgL_fGNYCubBm_MgLVicC3nRh6tgOgH5YjlpFR9l2iOxbjrQZoonFqb97HJ39lRaTktI9kcnsdQWV6p5tuH4fFlegz6QAN8WuMaC9vXg" alt=""> Hablanos cresudlaconcordia@gmail.com <br>
+                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yk/r/uknIbAjicIZ.png?_nc_eui2=AeGcM__xBwLOpFePXW98PH-TI673RnsqLIp88pN5EemXkF1ldnCxYaBEK06lL91HU93O-WKq1XaoCKobCpWRkfn_3W6pao0no4aljRPT31El_g" alt=""> 
+                    <a class="text-right" href="https://www.facebook.com/Educación-a-Distancia-La-Concordia-Ittg-201767440358752/">Contáctanos vía FB</a> </p>
+                </div>
+                <div class="mitad-derecha">
+                    <br><br><br>
+                    
+
+                    <br><br><br>
+                    <h2 style="text-align: center;">Sede Concordia</h2>
+                    <img style="float: right;" class="flex-center" target="_blank" src="{{ asset('imgs/concordia.jpg') }}" alt="concordia" width="60%">
+                </div>
+            </div>-->
         </section>
             <div class="site-info"><!--Información de contacto-->
                 <hr/><!--Separador-->

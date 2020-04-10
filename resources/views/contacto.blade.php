@@ -20,40 +20,26 @@
             </div><!--Logos institucionales-->
         </header>
         <!--Barra de navegación-->
-        <nav class="navbar navbar-expand menu">
-            <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                    <li>
-                        <a href="{{ url('/') }}">Inicio</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nadropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Oferta Educativa
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ url('ofertaEducativa') }}">Sedes Remotas</a>
-                            <a class="dropdown-item" href="{{ url('convocatoria') }}">Convocatoria</a>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a class="nadropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Contacto
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ url('directorio') }}">Directorio</a>
-                            <a class="dropdown-item" href="{{ url('contacto') }}">Correo Institucional</a>
-                        </div>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <!--<input type="submit" class="btn btn-outline-primary" value="Login"/>-->
-                    <button class="btn btn-outline-primary" type="submit">
-                        Iniciar Sesión
-                        <span><img src="{{ asset('imgs/login.png') }}" alt="Login"></span>
-                    </button>
-                </form>
-            </div>
-        </nav>
+        <!--<input type="checkbox" id="boton-menu">
+        <label for="boton-menu"><img src="imgs/menu.png" alt="Menú"></label>-->
+        <nav class="nav-menu">
+            <ul class="menu">
+                <li><a href="{{ url('/') }}">Inicio</a></li>
+                <li><a href="#">Oferta Educativa</a>
+                    <ul>
+                        <li><a href="{{ url('ofertaEducativa') }}">Sedes Remotas</a></li>
+                        <li><a href="{{ url('convocatoria') }}">Convocatoria</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contacto</a>
+                    <ul>
+                        <li><a href="{{ url('directorio') }}">Directorio</a></li>
+                        <li><a href="{{ url('contacto') }}">Correo Institucional</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ url('/login') }}">Iniciar Sesión</a></li>
+            </ul>
+        </nav><!--Fin de barra de navegación-->
         
     <div class="page">
         <nav aria-label="breadcrumb"><!--Navegador de breadcrumbs-->
@@ -85,23 +71,26 @@
                 </div><!-- Fin de la sección del objeto -->
         </aside><!-- Fin de aside-->
         <section class="contenedor"><!--Sección genérica-->
-        <h1>¡Comunicate con nosotros! </h1>
+        <!-- Cuerpo de la vista contacto -->
+        <h1>¡Comunicate con nosotros! </h1> <!-- Título -->
                 <p>Recuerda que puedes contactárnos a través de nuestras redes sociales o vía telefonica a cualquiera de nuestros números 
                 en la sección de directorio.</p>
                 <span class="flex-center"><br>También puedes enviarnos un correo desde cualquier otra plataforma al correo que aparece al final pie de la página.</span>
-        <div class="page">
-            <aside>
+        <div class="page"> <!-- div que utilizamos para guardar todo el contenido de nuestro formulario-->
+            <section class="mitad-izquierda"> <!-- Contenido con imagen situado a la izquierda -->
                 <img class="flex-center" src="{{ asset('imgs/aviso.png') }}" alt="Aviso" style="" width="100%"> 
-            </aside>
-            <section class="contenedor">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
+            </section>
+            <section class="mitad-derecha"> <!-- Contenido con el formulario situado a la derecha con imagen -->
+            <img class="flex-center" src="{{ asset('imgs/email.png') }}" alt="Aviso" style="margin-left: 150px;" width="50%">     
+            <br>
+                <div class="input-group mb-3"> <!-- input-group para poder ingresar varias entradas de nuestros formularios-->
+                    <div class="input-group-prepend"> <!-- input para que el usuario ingrese su nombre-->
                         <span style="width: 100%;" class="input-group-text" id="basic-addon1">Nombre</span>
                     </div>
                     <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1">
                     </div>
 
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3"> <!-- Input para ingresar su correo -->
                     <div class="input-group-prepend">
                         <span style="width: 85px;" class="input-group-text" id="basic-addon1">Correo</span>
                     </div>
@@ -109,13 +98,13 @@
                     </div>
 
                     <div class="input-group mb-3">
-                    <div class="input-group-prepend">
+                    <div class="input-group-prepend"> <!-- Input para ingresar asunto del correo-->
                         <span style="width: 85px;" class="input-group-text" id="basic-addon1">Asunto</span>
                     </div>
                     <input type="text" class="form-control" placeholder="Asunto" aria-label="Asunto" aria-describedby="basic-addon1">
                     </div>
 
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3"> <!-- textarea para ingresar el contenido del mensaje -->
                         <textarea class="form-control" placeholder="Mensaje" aria-label="With textarea"></textarea>
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary" type="button" id="button-addon2">Enviar</button>

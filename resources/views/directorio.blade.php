@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--Define el título para el documento-->
-        <title>Educación a Distancia | ITTG</title>
+        <title>Educación a Distancia | ITTG | Directorio</title>
 
         <!-- Hojas de estilo-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -20,54 +20,26 @@
             </div><!--Logos institucionales-->
         </header>
         <!--Barra de navegación-->
-        <nav class="navbar navbar-expand menu">
-            <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                    <li>
-                        <a class="active" href="{{ url('/') }}">Inicio</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nadropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Oferta Educativa
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ url('ofertaEducativa') }}">Sedes Remotas</a>
-                            <a class="dropdown-item" href="{{ url('convocatoria') }}">Convocatoria</a>
-                        </div>
-                    </li>
-                    <li class=" nav-item dropdown">
-                        <a class="nadropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Contacto
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ url('directorio') }}">Directorio</a>
-                            <a class="dropdown-item" href="{{ url('contacto') }}">Correo Institucional</a>
-                        </div>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-outline-primary" type="button">
-                        <a href="{{ url('/login') }}">
-                        Iniciar Sesión
-                        <span><img src="{{ asset('imgs/login.png') }}" alt="Login"></span>
-                        </a>
-                    </button>
-                </form>
-            </div>
-        </nav><!--Fin de la barra de navegación-->
-        <!--    @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif-->
+        <!--<input type="checkbox" id="boton-menu">
+        <label for="boton-menu"><img src="imgs/menu.png" alt="Menú"></label>-->
+        <nav class="nav-menu">
+            <ul class="menu">
+                <li><a href="{{ url('/') }}">Inicio</a></li>
+                <li><a href="#">Oferta Educativa</a>
+                    <ul>
+                        <li><a href="{{ url('ofertaEducativa') }}">Sedes Remotas</a></li>
+                        <li><a href="{{ url('convocatoria') }}">Convocatoria</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contacto</a>
+                    <ul>
+                        <li><a href="{{ url('directorio') }}">Directorio</a></li>
+                        <li><a href="{{ url('contacto') }}">Correo Institucional</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ url('/login') }}">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
         
         <div class="page">
         <nav aria-label="breadcrumb"><!--Navegador de breadcrumbs-->

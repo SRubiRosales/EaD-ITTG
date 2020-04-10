@@ -4,8 +4,6 @@ header{
 html, body {
     background-color: #fff;
     color: #636b6f;
-    font-weight: 200;
-    height: 100vh;
     margin: 0;
 }
 h1, h5{
@@ -26,41 +24,92 @@ h4{
     margin-right: 10px;
 }
 
-.align-right{
-    text-align: right;
-    margin-right: 35px;
+#boton-menu {
+	display: none;
 }
 
-nav{
-    text-align: inherit;
+label[for="boton-menu"] {
+	display: none;
+	padding: 5px;
+	background-color: #162e55;
 }
 
-nav div ul{
-    float: left;
-    list-style-type: none;
-    padding: 0;
-    position: relative; 
-    left: 50%;
+label[for="boton-menu"]:hover {
+	cursor: pointer;
+	background: #000;
 }
-nav div ul li{
-    float: left;
-    position: relative; 
-    right: 50%;
+
+.nav-menu {
+	text-align: center;
 }
-a.dropdown-item {
-    color: #000000 !important;
+
+.nav-menu ul {
+	list-style: none;
+	padding: 0;
 }
+
+.nav-menu li {
+	line-height: 3rem;
+	position: relative;
+	flex-grow: 1;
+}
+
+.nav-menu li ul {
+	position: absolute;
+}
+
+.nav-menu li:hover ul {
+	display: block;
+}
+
+.nav-menu a {
+	text-decoration: none;
+	font-size: large;
+	color: #fff;
+	padding: 5px 20px;
+	display: block;
+	transition: 0.3s;
+}
+
+.nav-menu a:hover {
+	background-color: #000;
+}
+
+.menu ul ul {
+	display: none;
+}
+
+.nav-menu .active {
+	background-color: #000;
+}
+/*Primer nivel de la barra de navegación*/
 .menu {
-    font-size: large;
-    background-color: #1b396a;
-    display: flex;
-    justify-content: right;
+	/*margin: 0;*/
+	background: #1b396a;
+	display: flex;
+	/*width: 100%;*/
+	/*justify-content: center;*/
 }
 
-.menu a{
-    color: white;
-    vertical-align: middle;
-    margin: 10px;
+.menu > li{
+	float: left;
+}
+
+/*Segundo nivel de la barra de navegación*/
+.nav-menu li li {
+	background-color: #224785;
+	max-height: 0;
+	transition: all .4s;
+	overflow: hidden;
+}
+
+.nav-menu li:hover li {
+	max-height: 200px;
+	overflow: visible;
+}
+
+.menu > li > ul {
+	top: 100%;
 }
 
 .page{
@@ -78,17 +127,24 @@ aside i{
     display: inline-block;
     max-height: 140px;
 }
-p ~ span{
-    font-weight: bold;
-}
+
 .contenedor{
     float: right;
     width: 75%;
 }
 
-a {
-    margin-bottom: 10px;
+.mitad-derecha{
+    float: right;
+    width: 50%;
 }
+.mitad-izquierda{
+    float: left;
+    width: 50%;
+}
+
+/*a {
+    margin-bottom: 10px;
+}*/
 
 .login-form{
     padding: 5%;
@@ -223,7 +279,7 @@ table {
     border-radius: 10px;
     overflow: hidden;
     margin: 0 auto;
-    position: relative;
+    position: absolute;
   }
   table * {
     position: relative;
@@ -308,12 +364,75 @@ a[target="_blank"] {
 	
 	padding-bottom: 10px;
 }
-input:hover {
+input:hover { /*-- Pseudoclases de estado: el cual cada que pasemos el cursor sobre un input o un textarea 
+    se pinte de otro color --*/
     background-color: rgb(173, 184, 247);
   }
 textarea:hover{
     background-color: rgb(173, 184, 247); 
 }
-textarea:enabled {
+textarea:enabled { /*-- Pseudoclases de estado: el cual usamos para que el texto del textarea se escriba en rojo cuando
+    se des-seleccione --*/
     color: red;
+}
+p ~ span{ /*-- Selector hermanos: que utilizamos para cambiar todos los span seguidos de un parrafo --*/
+    font-weight: bold;
+}
+ /*-- Selector de atributo: para que cada enlace sea pintado de color plateado, cuando sean un enlace a facebook --*/
+/*a[href*="facebook"] {
+    background-color: silver;
+}*/
+
+/*Estilo en dispositivos móviles*/
+@media(max-width: 768px) {
+    /*Solo muestra los logos que no son png*/
+    header > div > a img[src$=".png"] {
+        display: none;
+    }
+
+    /*Estilo de menú*/
+	label[for="boton-menu"] {/*Selector de atributo*/
+		display: block;
+	}
+
+	.nav-menu {
+		position: relative;
+		width: 100%;
+		text-align: left;
+		transition: 0.3s;
+	}
+
+	.menu {
+		flex-direction: column;
+	}
+
+	.menu > li > ul {
+        text-align: center;
+        top: 0;
+		left: 45%;
+		width: 55%;
+	}
+
+	.nav-menu a {
+		font-size: medium;
+		padding: 0px 5px;
+	}
+
+	.nav-menu li:hover ul {
+		display: inline-flex;
+    }
+    
+    /*Footer*/
+    #contenedorFooterR{
+        width: 100%;
+    }
+    
+    #contenedorFooterC{
+        margin: 0 10px;
+        width: 100%;
+    }
+    
+    #contenedorFooterL{
+        width: 100%;
+    }
 }
