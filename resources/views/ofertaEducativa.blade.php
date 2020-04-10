@@ -20,39 +20,26 @@
             </div><!--Logos institucionales-->
         </header>
         <!--Barra de navegación-->
-        <nav class="navbar navbar-expand menu">
-            <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                    <li>
-                        <a chref="{{ url('/') }}">Inicio</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nadropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Oferta Educativa
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ url('ofertaEducativa') }}">Sedes Remotas</a>
-                            <a class="dropdown-item" href="{{ url('convocatoria') }}">Convocatoria</a>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a class="nadropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Contacto
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ url('directorio') }}">Directorio</a>
-                            <a class="dropdown-item" href="{{ url('contacto') }}">Correo Institucional</a>
-                        </div>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-outline-primary" type="submit">
-                        Iniciar Sesión
-                        <span><img src="{{ asset('imgs/login.png') }}" alt="Login"></span>
-                    </button>
-                </form>
-            </div>
-        </nav><!--Fin de la barra de navegación-->
+        <!--<input type="checkbox" id="boton-menu">
+        <label for="boton-menu"><img src="imgs/menu.png" alt="Menú"></label>-->
+        <nav class="nav-menu">
+            <ul class="menu">
+                <li><a href="{{ url('/') }}">Inicio</a></li>
+                <li><a href="#">Oferta Educativa</a>
+                    <ul>
+                        <li><a href="{{ url('ofertaEducativa') }}">Sedes Remotas</a></li>
+                        <li><a href="{{ url('convocatoria') }}">Convocatoria</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contacto</a>
+                    <ul>
+                        <li><a href="{{ url('directorio') }}">Directorio</a></li>
+                        <li><a href="{{ url('contacto') }}">Correo Institucional</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ url('/login') }}">Iniciar Sesión</a></li>
+            </ul>
+        </nav><!--Fin de barra de navegación-->
         <!--    @if (Route::has('login'))
                 <div class="top-right links">
                     @auth

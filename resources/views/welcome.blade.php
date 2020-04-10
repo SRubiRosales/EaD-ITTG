@@ -28,41 +28,45 @@
             </div><!--Logos institucionales-->
         </header>
         <!--Barra de navegación-->
-        <nav class="navbar navbar-expand menu">
-            <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                    <li>
-                        <a class="active" href="{{ url('/') }}">Inicio</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nadropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Oferta Educativa
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ url('ofertaEducativa') }}">Sedes Remotas</a>
-                            <a class="dropdown-item" href="{{ url('convocatoria') }}">Convocatoria</a>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a class="nadropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Contacto
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ url('directorio') }}">Directorio</a>
-                            <a class="dropdown-item" href="{{ url('contacto') }}">Correo Institucional</a>
-                        </div>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-outline-primary" type="button">
-                        <a href="{{ url('/login') }}">
-                        Iniciar Sesión
-                        <span><img src="{{ asset('imgs/login.png') }}" alt="Login"></span>
-                        </a>
-                    </button>
-                </form>
-            </div>
-        </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark menu">
+            <a class="navbar-brand" href="{{ url('/') }}">Educación a Distancia</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span><!--Icono para menú desplegable en dispositivos móviles-->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown"><!--Contenedor para barra de navegación-->
+            <ul class="navbar-nav"><!--Lista no ordenada-->
+              <li class="nav-item active"><!--Elemento de la lista-->
+                <a class="nav-link" href="{{ url('/') }}">Inicio <span class="sr-only">(current)</span></a><!--Enlace-->
+              </li>
+              <li class="nav-item dropdown"><!--Elemento de la lista que despliega otras opciones-->
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Oferta Educativa
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"><!--Contenedor para opciones del dropdown-->
+                  <a class="dropdown-item" href="{{ url('ofertaEducativa') }}">Sedes Remotas</a><!--Enlace-->
+                  <a class="dropdown-item" href="{{ url('convocatoria') }}">Convocatoria</a><!--Enlace-->
+                </div>
+              </li>
+              <li class="nav-item dropdown"><!--Elemento de la lista que despliega otras opciones-->
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Contacto
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"><!--Contenedor para opciones del dropdown-->
+                  <a class="dropdown-item" href="{{ url('directorio') }}">Directorio</a><!--Enlace-->
+                  <a class="dropdown-item" href="{{ url('contacto') }}">Correo Institucional</a><!--Enlace-->
+                </div>
+              </li>
+            </ul>
+        </div>
+        <form class="form-inline my-2 my-lg-0"><!--Contenedor para elementos de formulario-->
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="button"><!--Botón-->
+                <a href="{{ url('/login') }}"><!--Enlace a página de login-->
+                Iniciar Sesión
+                <span><img src="{{ asset('imgs/login.png') }}" alt="Login"></span><!--Icono dentro de un span-->
+                </a>
+            </button>
+        </form>
+        </nav><!--Fin de barra de navegación-->
         <!--    @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
